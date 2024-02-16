@@ -42,14 +42,37 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
       return
     }
     
-    URLSession.shared.dataTask(with: URL(string: "https://www.omdbapi.com/?apikey=\(ApiVariables().apiKey)&s=fast&type=movie")!,
+    let query = text.replacingOccurrences(of: " ", with: "%20")
+    
+    movies.removeAll()
+    
+    URLSession.shared.dataTask(with: URL(string: "https://www.omdbapi.com/?apikey=\(ApiVariables().apiKey)&s=\(query)&type=movie")!,
                                completionHandler: {data, response, error in
       guard let data = data, error == nil else {
         return
       }
       //Convert
+      var result: MovieResults?
+      do{
+        result = try JSONDecoder().decode(MovieResults.self, from: data)
+      }
+      catch{
+        print("Error: while converting \(error)")
+      }
       
-      //Update our movies array 10.24
+      guard let finalResult = result else {
+        return
+      }
+      
+      
+      //Update our movies array
+      let newMovies = finalResult.Search
+      self.movies.append(contentsOf: newMovies)
+      
+      //Refresh our table
+      DispatchQueue.main.async {
+        self.table.reloadData()
+      }
       
     }).resume()
     
@@ -69,7 +92,4 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   }
 }
 
-struct Movie{
-  
-}
 
