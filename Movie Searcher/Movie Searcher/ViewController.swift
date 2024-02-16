@@ -5,10 +5,9 @@
 //  Created by Bartuğ Kaan Çelebi on 15.02.2024.
 //
 
-// tap a cell to see info about moview
-// custom cell
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, UITableViewDataSource {
   
@@ -90,6 +89,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     //show movie details
+    let url = "https://www.imdb.com/title/\(movies[indexPath.row].imdbID)/"
+    let vc = SFSafariViewController(url: URL(string: url)!)
+    present(vc,animated: true)
   }
 }
 
