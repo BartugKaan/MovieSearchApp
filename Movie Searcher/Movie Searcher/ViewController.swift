@@ -5,8 +5,6 @@
 //  Created by Bartuğ Kaan Çelebi on 15.02.2024.
 //
 
-// UI
-// Network Request
 // tap a cell to see info about moview
 // custom cell
 
