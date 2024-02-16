@@ -37,6 +37,22 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   
   func searchMovies(){
     field.resignFirstResponder()
+    
+    guard let text = field.text, !text.isEmpty else {
+      return
+    }
+    
+    URLSession.shared.dataTask(with: URL(string: "https://www.omdbapi.com/?apikey=\(ApiVariables().apiKey)&s=fast&type=movie")!,
+                               completionHandler: {data, response, error in
+      guard let data = data, error == nil else {
+        return
+      }
+      //Convert
+      
+      //Update our movies array 10.24
+      
+    }).resume()
+    
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

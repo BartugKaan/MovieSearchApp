@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81726EB62B7F2F2A004F30A1 /* ApiVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726EB52B7F2F2A004F30A1 /* ApiVariables.swift */; };
 		81C19FCF2B7E901900BF4DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FCE2B7E901900BF4DAD /* AppDelegate.swift */; };
 		81C19FD12B7E901900BF4DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FD02B7E901900BF4DAD /* SceneDelegate.swift */; };
 		81C19FD32B7E901900BF4DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FD22B7E901900BF4DAD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81726EB52B7F2F2A004F30A1 /* ApiVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVariables.swift; sourceTree = "<group>"; };
 		81C19FCB2B7E901900BF4DAD /* Movie Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C19FCE2B7E901900BF4DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C19FD02B7E901900BF4DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81726EB42B7F2F14004F30A1 /* ApiSettings */ = {
+			isa = PBXGroup;
+			children = (
+				81726EB52B7F2F2A004F30A1 /* ApiVariables.swift */,
+			);
+			path = ApiSettings;
+			sourceTree = "<group>";
+		};
 		81C19FC22B7E901900BF4DAD = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		81C19FCD2B7E901900BF4DAD /* Movie Searcher */ = {
 			isa = PBXGroup;
 			children = (
+				81726EB42B7F2F14004F30A1 /* ApiSettings */,
 				81C19FCE2B7E901900BF4DAD /* AppDelegate.swift */,
 				81C19FD02B7E901900BF4DAD /* SceneDelegate.swift */,
 				81C19FD22B7E901900BF4DAD /* ViewController.swift */,
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81726EB62B7F2F2A004F30A1 /* ApiVariables.swift in Sources */,
 				81C19FD32B7E901900BF4DAD /* ViewController.swift in Sources */,
 				81C19FCF2B7E901900BF4DAD /* AppDelegate.swift in Sources */,
 				81C19FD12B7E901900BF4DAD /* SceneDelegate.swift in Sources */,
