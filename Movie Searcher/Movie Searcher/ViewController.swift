@@ -24,6 +24,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
     table.dataSource = self
     table.delegate = self
     field.delegate = self
+    self.navigationController?.navigationBar.prefersLargeTitles = true
   }
   
   //Field Functions
@@ -83,6 +84,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
     cell.configure(with: movies[indexPath.row])
+    cell.layer.cornerRadius = 15
     return cell
   }
   
