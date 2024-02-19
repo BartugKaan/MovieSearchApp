@@ -25,6 +25,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
     table.delegate = self
     field.delegate = self
     self.navigationController?.navigationBar.prefersLargeTitles = true
+    self.navigationController?.navigationBar.tintColor = UIColor.label
   }
   
   //Field Functions
@@ -84,7 +85,10 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
     cell.configure(with: movies[indexPath.row])
-    cell.layer.cornerRadius = 15
+    cell.contentView.layer.cornerRadius = 15.0
+    cell.contentView.layer.borderColor = UIColor.black.cgColor
+    cell.contentView.layer.borderWidth = 1.0
+    cell.contentView.layer.backgroundColor = UIColor.gray.cgColor
     return cell
   }
   
