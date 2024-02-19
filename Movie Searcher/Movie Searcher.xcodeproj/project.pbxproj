@@ -47,6 +47,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812D3DBC2B836A8700E58D79 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		81726EB42B7F2F14004F30A1 /* ApiSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +99,7 @@
 		81C19FCD2B7E901900BF4DAD /* Movie Searcher */ = {
 			isa = PBXGroup;
 			children = (
+				812D3DBC2B836A8700E58D79 /* View Controllers */,
 				81726EBC2B7F3784004F30A1 /* Views */,
 				81726EB72B7F2FD2004F30A1 /* Models */,
 				81726EB42B7F2F14004F30A1 /* ApiSettings */,
