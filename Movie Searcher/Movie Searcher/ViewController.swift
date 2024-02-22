@@ -58,6 +58,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
       }
       catch{
         print("Error: while converting \(error)")
+        // Custom Alert controller needed if query does not return movies
       }
       
       guard let finalResult = result else {
