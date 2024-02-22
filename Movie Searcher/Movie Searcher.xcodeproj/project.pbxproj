@@ -12,6 +12,8 @@
 		81726EBB2B7F303F004F30A1 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726EBA2B7F303F004F30A1 /* MovieResults.swift */; };
 		81726EBF2B7F37B3004F30A1 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726EBD2B7F37B3004F30A1 /* MovieTableViewCell.swift */; };
 		81726EC02B7F37B3004F30A1 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81726EBE2B7F37B3004F30A1 /* MovieTableViewCell.xib */; };
+		81B0B3552B877913001AA792 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B0B3532B877913001AA792 /* CustomAlertViewController.swift */; };
+		81B0B3562B877913001AA792 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B0B3542B877913001AA792 /* CustomAlertViewController.xib */; };
 		81C19FCF2B7E901900BF4DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FCE2B7E901900BF4DAD /* AppDelegate.swift */; };
 		81C19FD12B7E901900BF4DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FD02B7E901900BF4DAD /* SceneDelegate.swift */; };
 		81C19FD32B7E901900BF4DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C19FD22B7E901900BF4DAD /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		81726EBA2B7F303F004F30A1 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 		81726EBD2B7F37B3004F30A1 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		81726EBE2B7F37B3004F30A1 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		81B0B3532B877913001AA792 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		81B0B3542B877913001AA792 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
 		81C19FCB2B7E901900BF4DAD /* Movie Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C19FCE2B7E901900BF4DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81C19FD02B7E901900BF4DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			children = (
 				81726EBD2B7F37B3004F30A1 /* MovieTableViewCell.swift */,
 				81726EBE2B7F37B3004F30A1 /* MovieTableViewCell.xib */,
+				81B0B3532B877913001AA792 /* CustomAlertViewController.swift */,
+				81B0B3542B877913001AA792 /* CustomAlertViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B0B3562B877913001AA792 /* CustomAlertViewController.xib in Resources */,
 				81C19FDB2B7E901A00BF4DAD /* LaunchScreen.storyboard in Resources */,
 				81C19FD82B7E901A00BF4DAD /* Assets.xcassets in Resources */,
 				81726EC02B7F37B3004F30A1 /* MovieTableViewCell.xib in Resources */,
@@ -190,6 +197,7 @@
 				81726EBB2B7F303F004F30A1 /* MovieResults.swift in Sources */,
 				81726EBF2B7F37B3004F30A1 /* MovieTableViewCell.swift in Sources */,
 				81C19FD32B7E901900BF4DAD /* ViewController.swift in Sources */,
+				81B0B3552B877913001AA792 /* CustomAlertViewController.swift in Sources */,
 				81C19FCF2B7E901900BF4DAD /* AppDelegate.swift in Sources */,
 				81C19FD12B7E901900BF4DAD /* SceneDelegate.swift in Sources */,
 				81726EB92B7F2FE5004F30A1 /* Movie.swift in Sources */,
