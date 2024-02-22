@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomAlertViewController: UIViewController {
-
+  
   @IBOutlet var alertImage: UIImageView!
   @IBOutlet var alertTitle: UILabel!
   @IBOutlet var alertMessage: UILabel!
@@ -16,15 +16,25 @@ class CustomAlertViewController: UIViewController {
   
   
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+    
+  init() {
+    super.init(nibName: "CustomAlertViewController", bundle: Bundle(for: CustomAlertViewController.self))
+    self.modalPresentationStyle = .overCurrentContext
+    self.modalTransitionStyle = .crossDissolve
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+ 
   
   @IBAction func buttonTapped(_ sender: UIButton) {
+    print("Button tapped")
+    self.dismiss(animated: false)
   }
   
 }
