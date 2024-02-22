@@ -17,6 +17,7 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
   @IBOutlet var field: UITextField!
   
   var movies = [Movie]()
+  var isMovieExist = true
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -59,6 +60,9 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
       catch{
         print("Error: while converting \(error)")
         // Custom Alert controller needed if query does not return movies
+        DispatchQueue.main.async {
+          self.navigationController?.pushViewController(CustomAlertViewController(), animated: false)
+        }
       }
       
       guard let finalResult = result else {
