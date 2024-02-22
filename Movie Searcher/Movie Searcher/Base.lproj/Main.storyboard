@@ -78,25 +78,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popcorn.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GIM-no-LOC">
-                                <rect key="frame" x="76.666666666666686" y="304.66666666666669" width="240" height="244.00000000000006"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="DXk-HH-HqL"/>
-                                    <constraint firstAttribute="width" secondItem="GIM-no-LOC" secondAttribute="height" multiplier="1:1" id="pOu-Qt-kGk"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Movie Searcher" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFj-xr-5iF">
-                                <rect key="frame" x="10" y="556" width="373" height="114.66666666666663"/>
+                                <rect key="frame" x="30" y="443" width="333" height="114.66666666666663"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-WG-7bN">
-                                <rect key="frame" x="76.666666666666686" y="680.66666666666663" width="240" height="42.666666666666629"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="GIM-no-LOC">
+                                <rect key="frame" x="40" y="100" width="313" height="313"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="zQ4-5D-oZq"/>
+                                    <constraint firstAttribute="width" secondItem="GIM-no-LOC" secondAttribute="height" multiplier="1:1" id="kqF-ks-x1E"/>
                                 </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Movie Searcher you can search your favorite movies. Also you can visit their Imdb pages." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMv-u1-iQ6">
+                                <rect key="frame" x="30" y="587.66666666666663" width="333" height="114.66666666666663"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98g-WG-7bN">
+                                <rect key="frame" x="96.333333333333329" y="722.33333333333337" width="200.33333333333337" height="42.666666666666629"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search a movie">
@@ -111,13 +113,17 @@
                         <viewLayoutGuide key="safeArea" id="oQ0-Ot-7Uk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NFj-xr-5iF" firstAttribute="top" secondItem="GIM-no-LOC" secondAttribute="bottom" constant="10" id="58a-Gq-RPg"/>
-                            <constraint firstItem="GIM-no-LOC" firstAttribute="centerX" secondItem="PFk-a5-YtT" secondAttribute="centerX" id="DOH-C3-4Pt"/>
-                            <constraint firstItem="NFj-xr-5iF" firstAttribute="leading" secondItem="oQ0-Ot-7Uk" secondAttribute="leading" constant="10" id="ak7-AN-Hp9"/>
-                            <constraint firstItem="GIM-no-LOC" firstAttribute="centerY" secondItem="PFk-a5-YtT" secondAttribute="centerY" id="fe0-H5-KdY"/>
-                            <constraint firstItem="98g-WG-7bN" firstAttribute="top" secondItem="NFj-xr-5iF" secondAttribute="bottom" constant="10" id="hOZ-5N-yoF"/>
-                            <constraint firstItem="oQ0-Ot-7Uk" firstAttribute="trailing" secondItem="NFj-xr-5iF" secondAttribute="trailing" constant="10" id="qfh-aD-cyc"/>
-                            <constraint firstItem="98g-WG-7bN" firstAttribute="centerX" secondItem="PFk-a5-YtT" secondAttribute="centerX" id="uvw-XN-PXl"/>
+                            <constraint firstItem="VMv-u1-iQ6" firstAttribute="top" secondItem="NFj-xr-5iF" secondAttribute="bottom" constant="30" id="27L-Qr-360"/>
+                            <constraint firstItem="GIM-no-LOC" firstAttribute="leading" secondItem="PFk-a5-YtT" secondAttribute="leading" constant="40" id="9LI-Hk-VkM"/>
+                            <constraint firstItem="98g-WG-7bN" firstAttribute="centerX" secondItem="PFk-a5-YtT" secondAttribute="centerX" id="DiX-Fv-Ltb"/>
+                            <constraint firstAttribute="trailing" secondItem="VMv-u1-iQ6" secondAttribute="trailing" constant="30" id="SKh-DV-5oa"/>
+                            <constraint firstAttribute="trailing" secondItem="GIM-no-LOC" secondAttribute="trailing" constant="40" id="Uhb-ER-EEk"/>
+                            <constraint firstItem="VMv-u1-iQ6" firstAttribute="leading" secondItem="PFk-a5-YtT" secondAttribute="leading" constant="30" id="Vq3-gp-hb4"/>
+                            <constraint firstItem="98g-WG-7bN" firstAttribute="top" secondItem="VMv-u1-iQ6" secondAttribute="bottom" constant="20" id="YdD-UZ-cpX"/>
+                            <constraint firstItem="GIM-no-LOC" firstAttribute="top" secondItem="PFk-a5-YtT" secondAttribute="top" constant="100" id="Zbb-YV-VcV"/>
+                            <constraint firstAttribute="trailing" secondItem="NFj-xr-5iF" secondAttribute="trailing" constant="30" id="j9X-aW-wZQ"/>
+                            <constraint firstItem="NFj-xr-5iF" firstAttribute="leading" secondItem="PFk-a5-YtT" secondAttribute="leading" constant="30" id="qdT-5K-jWR"/>
+                            <constraint firstItem="NFj-xr-5iF" firstAttribute="top" secondItem="GIM-no-LOC" secondAttribute="bottom" constant="30" id="rUI-QG-OfJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QMB-sV-8IE"/>
@@ -128,7 +134,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="popcorn.fill" catalog="system" width="98" height="128"/>
+        <image name="appLogo" width="500" height="500"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
