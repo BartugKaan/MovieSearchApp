@@ -34,8 +34,15 @@ class MovieTableViewCell: UITableViewCell {
     self.movieYearLabel.text = model.Year
     self.movieType.text = model._Type.uppercased()
     let url = model.Poster
-    if let data = try? Data(contentsOf: URL(string: url)!){
-      self.moviePosterImageView.image = UIImage(data: data)
-    }
+    URLSession.shared.dataTask(with: URL(string: url)!) { data, response, error in
+      DispatchQueue.main.async {
+        self.moviePosterImageView.image = UIImage(data: data!)
+      }
+    }.resume()
+//    if let data = try? Data(contentsOf: URL(string: url)!){
+//      DispatchQueue.main.async {
+//        self.moviePosterImageView.image = UIImage(data: data)
+//      }
+//    }
   }
 }
