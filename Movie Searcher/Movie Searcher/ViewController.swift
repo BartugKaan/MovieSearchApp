@@ -61,7 +61,12 @@ class ViewController: UIViewController,UITextFieldDelegate,UITableViewDelegate, 
         print("Error: while converting \(error)")
         // Custom Alert controller needed if query does not return movies
         DispatchQueue.main.async {
-          self.navigationController?.pushViewController(CustomAlertViewController(), animated: false)
+          let alert = UIAlertController(title: "Error", message: "\(self.field.text!) is not found in our system!", preferredStyle: .alert)
+          let alertAction = UIAlertAction(title: "OK", style: .cancel) { UIAlertAction in
+            self.dismiss(animated: true)
+          }
+          alert.addAction(alertAction)
+          self.present(alert,animated: true,completion: nil)
         }
       }
       
