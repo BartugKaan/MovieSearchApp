@@ -35,8 +35,16 @@ class MovieTableViewCell: UITableViewCell {
     self.movieType.text = model._Type.uppercased()
     let url = model.Poster
     URLSession.shared.dataTask(with: URL(string: url)!) { data, response, error in
+      
+      guard let data = data, error == nil else{
+        DispatchQueue.main.async {
+          self.moviePosterImageView.image = UIImage(systemName: "exclamationmark.magnifyingglass")
+          self.moviePosterImageView.tintColor = .label
+        }
+        return
+      }
       DispatchQueue.main.async {
-        self.moviePosterImageView.image = UIImage(data: data!)
+        self.moviePosterImageView.image = UIImage(data: data)
       }
     }.resume()
 //    if let data = try? Data(contentsOf: URL(string: url)!){
