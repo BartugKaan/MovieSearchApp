@@ -47,10 +47,5 @@ class MovieTableViewCell: UITableViewCell {
         self.moviePosterImageView.image = UIImage(data: data)
       }
     }.resume()
-//    if let data = try? Data(contentsOf: URL(string: url)!){
-//      DispatchQueue.main.async {
-//        self.moviePosterImageView.image = UIImage(data: data)
-//      }
-//    }
   }
 }
